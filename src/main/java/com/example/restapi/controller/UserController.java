@@ -23,8 +23,7 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserEntity> getUserById(@PathVariable Long id) {
         UserEntity user = userService.getUserById(id);
-        if (user != null) 
-        {
+        if (user != null) {
             return ResponseEntity.ok(user);
         } else {
             return ResponseEntity.notFound().build();
